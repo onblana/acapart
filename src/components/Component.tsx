@@ -1,7 +1,7 @@
 const Component = () => {
   return (
     <div className="">
-      <p>Empty Component</p>
+      <span>Empty Component</span>
     </div>
   );
 };
