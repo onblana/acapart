@@ -1,10 +1,17 @@
-const PostItem = () => {
+import Post from "@/types";
+
+interface PostItemProps {
+  key: number;
+  post: Post;
+}
+
+const PostItem = ({ post }: PostItemProps) => {
   return (
-    <div className="grid grid-cols-4 gap-4">
-      <span>공지</span>
-      <span>공지사항입니다!</span>
-      <span>작성자</span>
-      <span>07-04</span>
+    <div className="flex gap-10 mb-3">
+      <span className="flex-initial">{post.category}</span>
+      <span className="flex-auto w-32">{post.title}</span>
+      <span className="flex-initial">{post.author_name}</span>
+      <span className="flex-initial">{post.created}</span>
     </div>
   );
 };

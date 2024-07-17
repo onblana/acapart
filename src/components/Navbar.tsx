@@ -11,10 +11,12 @@ const buttonInfo = [
 
 const Navbar = () => {
   return (
-    <div className="flex bg-rose-100 min-w-screen mb-10 w-full justify-evenly w-full">
-      {buttonInfo.map((info, i) => (
-        <NavBtn name={info.name} href={info.href} />
-      ))}
+    <div className="flex justify-center bg-rose-100 w-full mb-10">
+      <div className="flex justify-evenly w-3/4 max-w-3xl">
+        {buttonInfo.map((info, i) => (
+          <NavBtn name={info.name} key={i} href={info.href} />
+        ))}
+      </div>
     </div>
   );
 };
